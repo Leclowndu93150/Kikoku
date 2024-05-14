@@ -91,7 +91,7 @@ public class KikokuItem extends SwordItem {
         }
         net.minecraft.world.item.ItemStack sword = event.getLeft();
         ItemStack book = event.getRight();
-        if (sword == null || sword.getItem() != Kikoku.Kikoku.get() || book == null || book.getItem() != Items.ENCHANTED_BOOK) {
+        if (sword == null || sword.getItem() != ItemList.Kikoku.get() || book == null || book.getItem() != Items.ENCHANTED_BOOK) {
             return;
         }
         Map<net.minecraft.world.item.enchantment.Enchantment, Integer> swordMap = net.minecraft.world.item.enchantment.EnchantmentHelper.getEnchantments(sword);
@@ -129,7 +129,7 @@ public class KikokuItem extends SwordItem {
         if (!event.getEntity().getCommandSenderWorld().isClientSide) {
             return;
         }
-        if (event.getOutput().getItem() == Kikoku.Kikoku.get() && event.getEntity() instanceof AbstractClientPlayer) {
+        if (event.getOutput().getItem() == ItemList.Kikoku.get() && event.getEntity() instanceof AbstractClientPlayer) {
             event.getEntity().playSound(SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, 1, 1);
         }
     }
