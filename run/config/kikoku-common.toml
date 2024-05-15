@@ -1,0 +1,6 @@
+
+["General Settings"]
+	#What Should the Max Multiplier of Kikoku Enchant be?
+	#Range: 1 ~ 5000
+	"Kikoku Max" = 2
+
